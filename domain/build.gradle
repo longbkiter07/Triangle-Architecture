@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+android {
+  compileSdkVersion 23
+  buildToolsVersion "24.0.0 rc2"
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  defaultConfig {
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+retrolambda {
+  jvmArgs '-noverify'
+}
+dependencies {
+  provided 'javax.annotation:jsr250-api:1.0'
+  provided 'com.google.dagger:dagger-compiler:2.0.2'
+  compile 'com.google.dagger:dagger:2.0.2'
+  compile 'io.reactivex:rxjava:1.1.0'
+}
