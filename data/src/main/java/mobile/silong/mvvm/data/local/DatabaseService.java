@@ -8,7 +8,7 @@ import com.raizlabs.android.dbflow.sql.language.SQLite;
 import java.util.ArrayList;
 import java.util.List;
 
-import mobile.silong.mvvm.data.local.converter.MVVMConverter;
+import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.data.local.model.CacheUser;
 import mobile.silong.mvvm.data.local.model.CacheUser_Table;
 import mobile.silong.mvvm.domain.exception.DataNotFoundException;

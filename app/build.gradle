@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.android.databinding'
 
 android {
   compileSdkVersion 23
@@ -31,7 +32,7 @@ dependencies {
   testCompile 'junit:junit:4.12'
   provided 'com.google.dagger:dagger-compiler:2.0.2'
   compile 'com.android.support:appcompat-v7:23.3.0'
-
+  compile 'io.reactivex:rxandroid:1.1.0'
   compile(project(path: ':domain')) {
     transitive = true
   }
