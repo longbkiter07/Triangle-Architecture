@@ -8,11 +8,12 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import mobile.silong.mvvm.data.api.ApiServiceWrapper;
 import mobile.silong.mvvm.data.api.HttpApiService;
 import mobile.silong.mvvm.data.local.DatabaseService;
 import mobile.silong.mvvm.data.local.converter.CacheUserConverter;
-import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.data.local.model.CacheUser;
+import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.service.ApiService;
 import mobile.silong.mvvm.domain.service.LocalService;
@@ -49,7 +50,7 @@ public class DataModule {
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .client(okHttpClient)
         .build();
-    return retrofit.create(HttpApiService.class);
+    return new ApiServiceWrapper(retrofit.create(HttpApiService.class));
   }
 
   @Provides
