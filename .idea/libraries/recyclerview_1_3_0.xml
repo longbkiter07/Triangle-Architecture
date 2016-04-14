@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="recyclerview-1.3.0">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.henrytao/recyclerview/1.3.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.henrytao/recyclerview/1.3.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.henrytao/recyclerview/1.3.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.henrytao/recyclerview/1.3.0/53828cca341f816923f12dd48e1d120928c3e707/recyclerview-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
