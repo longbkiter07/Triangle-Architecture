@@ -7,7 +7,7 @@
 
         <variable
             name="userViewModel"
-            type="mobile.silong.mvvm.viewmodel.UserViewModel" />
+            type="mobile.silong.mvvm.presentation.SingleUserViewModel" />
     </data>
 
     <android.support.v7.widget.CardView
@@ -25,7 +25,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{userViewModel.fullName}"
                 tools:text="Full name of User" />
         </LinearLayout>
     </android.support.v7.widget.CardView>

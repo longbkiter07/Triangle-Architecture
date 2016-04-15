@@ -1,6 +1,7 @@
 package mobile.silong.mvvm.data.local.converter;
 
 import mobile.silong.mvvm.data.local.model.CacheUser;
+import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.domain.model.User;
 
 /**

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import mobile.silong.mvvm.model.AppUser;
+import mobile.silong.mvvm.domain.model.User;
 
 /**
  * Created by lamtn on 4/13/16.
@@ -16,7 +16,7 @@ import mobile.silong.mvvm.model.AppUser;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserBindingHolder> {
 
   private Context mContext;
-  private List<AppUser> mUserList;
+  private List<User> mUserList;
 
   public UserAdapter(Context mContext) {
     this.mContext = mContext;
@@ -41,7 +41,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserBindingHol
 //    holder.binding.setUserViewModel(new UserViewModel(mContext, this.mUserList.get(position)));
   }
 
-  public void setUserList(List<AppUser> userList) {
+  public void setUserList(List<User> userList) {
     this.mUserList = userList;
     notifyDataSetChanged();
   }

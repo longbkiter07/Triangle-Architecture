@@ -1,4 +1,4 @@
-package mobile.silong.mvvm.data.local.converter;
+package mobile.silong.mvvm.domain.converter;
 
 /**
  * Created by SILONG on 4/13/16.

@@ -1,23 +1,22 @@
 package mobile.silong.mvvm.view.singleuser;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 
-import butterknife.ButterKnife;
 import mobile.silong.mvvm.R;
+import mobile.silong.mvvm.databinding.ActivitySingleUserBinding;
+import mobile.silong.mvvm.presentation.SingleUserViewModel;
+import mobile.silong.mvvm.view.BaseActivity;
 
-public class SingleUserActivity extends AppCompatActivity {
+public class SingleUserActivity extends BaseActivity<SingleUserViewModel> {
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_user);
-    ButterKnife.bind(this);
+  public void bindViewModel(SingleUserViewModel viewModel) {
+    ActivitySingleUserBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_single_user);
+    binding.setSingleUserViewModel(viewModel);
   }
 
   @Override
-  protected void onDestroy() {
-    super.onDestroy();
-    ButterKnife.unbind(this);
+  public SingleUserViewModel createViewModel() {
+    return getAppComponent().getSingleUserViewModel();
   }
 }

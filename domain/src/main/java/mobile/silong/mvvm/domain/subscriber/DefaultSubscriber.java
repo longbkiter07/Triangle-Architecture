@@ -5,7 +5,7 @@ import rx.Subscriber;
 /**
  * Created by lamtn on 4/13/16.
  */
-public class DefaultSubscriber<T> extends Subscriber<T> {
+public abstract class DefaultSubscriber<T> extends Subscriber<T> {
   @Override
   public void onCompleted() {
 
