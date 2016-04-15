@@ -10,8 +10,8 @@ import rx.Observable;
  */
 public interface ApiService {
 
-  <T extends User> Observable<List<T>> getUsers();
+  Observable<List<? extends User>> getUsers();
 
-  Observable<? extends User> getUser(String id);
+  Observable<User> getUser(String id);
 
 }
