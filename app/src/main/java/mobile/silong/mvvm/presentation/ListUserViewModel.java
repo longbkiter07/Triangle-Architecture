@@ -1,11 +1,15 @@
 package mobile.silong.mvvm.presentation;
 
+import android.databinding.Bindable;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import mobile.silong.mvvm.BR;
 import mobile.silong.mvvm.domain.model.User;
-import mobile.silong.mvvm.domain.subscriber.DefaultSubscriber;
 import mobile.silong.mvvm.domain.usecase.ListUserUseCase;
 import mobile.silong.mvvm.transformer.BackgroundTaskTransformer;
 import mobile.silong.mvvm.view.listuser.ListUserView;
@@ -15,10 +19,13 @@ import mobile.silong.mvvm.view.listuser.ListUserView;
  */
 public class ListUserViewModel extends BaseViewModel<ListUserView> {
 
+  private static final String TAG = ListUserViewModel.class.getSimpleName();
+
   private List<User> mUserList;
 
   private ListUserUseCase mListUserUseCase;
 
+  @Inject
   public ListUserViewModel(ListUserUseCase listUserUseCase) {
     mListUserUseCase = listUserUseCase;
   }
@@ -31,26 +38,17 @@ public class ListUserViewModel extends BaseViewModel<ListUserView> {
   public void load() {
     mListUserUseCase.buildUseCase()
         .compose(new BackgroundTaskTransformer<>())
-        .subscribe(new ListUserSubscriber());
+        .subscribe(users -> {
+          Log.i(TAG, "load");
+          mUserList = users;
+          notifyPropertyChanged(BR.userList);
+        }, throwable -> {
+          Log.e(TAG, "load: " + throwable.getMessage());
+        });
   }
 
+  @Bindable
   public List<User> getUserList() {
     return mUserList;
-  }
-
-  private final class ListUserSubscriber extends DefaultSubscriber<List<User>> {
-
-    @Override
-    public void onCompleted() {
-    }
-
-    @Override
-    public void onError(Throwable e) {
-    }
-
-    @Override
-    public void onNext(List<User> users) {
-      mUserList = users;
-    }
   }
 }

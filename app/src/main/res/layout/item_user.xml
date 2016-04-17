@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
+  <data>
 
-        <variable
-            name="userViewModel"
-            type="mobile.silong.mvvm.presentation.SingleUserViewModel" />
-    </data>
+    <variable
+      name="itemUser"
+      type="mobile.silong.mvvm.presentation.ItemUserViewModel" />
+  </data>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
+  <android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:onClick="@{itemUser.onClickItemUser}"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:contentPadding="16dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        app:contentPadding="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Full name of User" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+        android:text="@{itemUser.fullName}"
+        tools:text="Full name of User" />
+    </LinearLayout>
+  </android.support.v7.widget.CardView>
 </layout>

@@ -1,22 +1,31 @@
 package mobile.silong.mvvm.presentation;
 
+import android.databinding.Bindable;
 import android.os.Bundle;
+import android.util.Log;
 
+import javax.inject.Inject;
+
+import mobile.silong.mvvm.BR;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.usecase.SingleUserUseCase;
 import mobile.silong.mvvm.transformer.BackgroundTaskTransformer;
 import mobile.silong.mvvm.view.singleuser.SingleUserView;
-import rx.Subscriber;
 
 /**
  * Created by lamtn on 4/14/16.
  */
-public class SingleUserViewModel extends BaseViewModel<SingleUserView> implements User {
+public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
+
+  private static final String TAG = SingleUserViewModel.class.getSimpleName();
 
   private User mUser;
 
+  private String mUserId;
+
   private SingleUserUseCase mSingleUserUseCase;
 
+  @Inject
   public SingleUserViewModel(SingleUserUseCase singleUserUseCase) {
     mSingleUserUseCase = singleUserUseCase;
   }
@@ -27,60 +36,27 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> implement
   }
 
   private void load() {
-    mSingleUserUseCase.buildUseCase()
+    mSingleUserUseCase.with(mUserId).buildUseCase()
         .compose(new BackgroundTaskTransformer<>())
-        .subscribe(new SingleUserSubscriber());
+        .subscribe(user -> {
+          Log.i(TAG, "onNext");
+          mUser = user;
+          notifyPropertyChanged(BR.user);
+        }, throwable -> {
+          Log.e(TAG, "onError: " + throwable.getMessage());
+        });
   }
 
+  public void setUserId(String userId) {
+    mUserId = userId;
+  }
+
+  @Bindable
   public User getUser() {
     return mUser;
   }
 
-  @Override
-  public String getId() {
-    return this.mUser.getId();
-  }
-
-  @Override
-  public String getFullName() {
-    return this.mUser.getFullName();
-  }
-
-  @Override
-  public String getEmail() {
-    return this.mUser.getEmail();
-  }
-
-  @Override
-  public String getDescription() {
-    return this.mUser.getDescription();
-  }
-
-  @Override
-  public String getFollowers() {
-    return this.mUser.getFollowers();
-  }
-
-  @Override
-  public String getCoverUrl() {
-    return this.mUser.getCoverUrl();
-  }
-
-  private final class SingleUserSubscriber extends Subscriber<User> {
-
-    @Override
-    public void onCompleted() {
-
-    }
-
-    @Override
-    public void onError(Throwable e) {
-
-    }
-
-    @Override
-    public void onNext(User user) {
-      mUser = user;
-    }
+  public void setUser(User user) {
+    mUser = user;
   }
 }

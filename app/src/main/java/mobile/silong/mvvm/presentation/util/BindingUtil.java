@@ -3,6 +3,7 @@ package mobile.silong.mvvm.presentation.util;
 import android.databinding.BindingAdapter;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.util.List;
 
@@ -14,12 +15,16 @@ import mobile.silong.mvvm.domain.model.User;
  */
 public class BindingUtil {
 
+  private static final String TAG = BindingUtil.class.getSimpleName();
+
   private BindingUtil() {
 
   }
 
   @BindingAdapter("bind:userList")
   public static void loadUserList(RecyclerView recyclerView, List<User> users) {
+    Log.i(TAG, "loadUserList: " + users);
+
     RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
     if (layoutManager == null) {
       recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));

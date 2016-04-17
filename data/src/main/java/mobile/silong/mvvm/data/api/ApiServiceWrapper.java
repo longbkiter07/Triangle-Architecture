@@ -18,8 +18,9 @@ public class ApiServiceWrapper implements ApiService {
   }
 
   @Override
-  public Observable<List<? extends User>> getUsers() {
-    return mHttpApiService.getUsers().flatMap(apiUsers -> Observable.just(apiUsers));
+  public Observable<List<User>> getUsers() {
+    Observable<User> observable = mHttpApiService.getUsers().flatMap(apiUsers -> Observable.from(apiUsers));
+    return observable.toList();
   }
 
   @Override

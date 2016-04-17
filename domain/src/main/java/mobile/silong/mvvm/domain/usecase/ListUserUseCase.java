@@ -24,8 +24,7 @@ public class ListUserUseCase implements UseCase<List<User>> {
   @Override
   public Observable<List<User>> buildUseCase() {
     return mApiService.getUsers()
-        .flatMap(users -> mLocalService
-            .saveUsers(users)
+        .flatMap(users -> mLocalService.saveUsers(users)
             .flatMap(aVoid -> Observable.just(users)));
   }
 }
