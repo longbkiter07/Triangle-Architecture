@@ -1,12 +1,12 @@
 package mobile.silong.mvvm.presentation;
 
 import android.databinding.Bindable;
+import android.databinding.ObservableField;
 import android.os.Bundle;
 import android.util.Log;
 
 import javax.inject.Inject;
 
-import mobile.silong.mvvm.BR;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.usecase.SingleUserUseCase;
 import mobile.silong.mvvm.transformer.BackgroundTaskTransformer;
@@ -25,6 +25,18 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   private SingleUserUseCase mSingleUserUseCase;
 
+  public ObservableField<String> id = new ObservableField<>();
+
+  public ObservableField<String> fullName = new ObservableField<>();
+
+  public ObservableField<String> email = new ObservableField<>();
+
+  public ObservableField<String> description = new ObservableField<>();
+
+  public ObservableField<String> followers = new ObservableField<>();
+
+  public ObservableField<String> coverUrl = new ObservableField<>();
+
   @Inject
   public SingleUserViewModel(SingleUserUseCase singleUserUseCase) {
     mSingleUserUseCase = singleUserUseCase;
@@ -40,8 +52,7 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
         .compose(new BackgroundTaskTransformer<>())
         .subscribe(user -> {
           Log.i(TAG, "onNext");
-          mUser = user;
-          notifyPropertyChanged(BR.user);
+          setUser(user);
         }, throwable -> {
           Log.e(TAG, "onError: " + throwable.getMessage());
         });
@@ -58,5 +69,12 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   public void setUser(User user) {
     mUser = user;
+
+    id.set(user.getId());
+    fullName.set(user.getFullName());
+    email.set(user.getEmail());
+    description.set(user.getDescription());
+    followers.set(user.getFollowers());
+    coverUrl.set(user.getCoverUrl());
   }
 }

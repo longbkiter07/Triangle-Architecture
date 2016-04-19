@@ -72,6 +72,7 @@ public class DatabaseService implements LocalService {
         CacheUser cacheUser = mUserConverter.convert(user);
         cacheUser.save();
         mSubject.onNext(user);
+        RxUtils.onNext(subscriber, null, true);
       } catch (Exception e) {
         RxUtils.onError(subscriber, e);
       }

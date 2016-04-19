@@ -12,7 +12,7 @@ public class SingleUserActivity extends BaseActivity<SingleUserViewModel> {
   @Override
   public void bindViewModel(SingleUserViewModel viewModel) {
     ActivitySingleUserBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_single_user);
-    binding.setUser(viewModel.getUser());
+    binding.setUserModel(viewModel);
   }
 
   @Override
