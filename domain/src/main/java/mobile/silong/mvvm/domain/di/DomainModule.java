@@ -4,6 +4,7 @@ import dagger.Module;
 import dagger.Provides;
 import mobile.silong.mvvm.domain.service.ApiService;
 import mobile.silong.mvvm.domain.service.LocalService;
+import mobile.silong.mvvm.domain.usecase.GetAndSaveUserUseCase;
 import mobile.silong.mvvm.domain.usecase.ListUserUseCase;
 import mobile.silong.mvvm.domain.usecase.SingleUserUseCase;
 
@@ -14,12 +15,17 @@ import mobile.silong.mvvm.domain.usecase.SingleUserUseCase;
 public class DomainModule {
 
   @Provides
-  public SingleUserUseCase provideSingleUserUseCase(ApiService apiService, LocalService localService) {
-    return new SingleUserUseCase(apiService, localService);
+  public SingleUserUseCase provideSingleUserUseCase(LocalService localService, GetAndSaveUserUseCase getAndSaveUserUseCase) {
+    return new SingleUserUseCase(localService, getAndSaveUserUseCase);
   }
 
   @Provides
-  public ListUserUseCase provideListUserUseCase(ApiService apiService, LocalService localService) {
-    return new ListUserUseCase(apiService, localService);
+  public ListUserUseCase provideListUserUseCase(ApiService apiService) {
+    return new ListUserUseCase(apiService);
+  }
+
+  @Provides
+  public GetAndSaveUserUseCase provideGetAndSaveUserUseCase(ApiService apiService, LocalService localService) {
+    return new GetAndSaveUserUseCase(apiService, localService);
   }
 }

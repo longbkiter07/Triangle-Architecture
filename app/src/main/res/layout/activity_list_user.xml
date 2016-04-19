@@ -9,25 +9,21 @@
       type="mobile.silong.mvvm.presentation.ListUserViewModel" />
   </data>
 
-  <RelativeLayout
+  <com.kennyc.view.MultiStateView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:msv_emptyView="@layout/view_empty"
+    app:msv_errorView="@layout/view_error"
+    app:msv_loadingView="@layout/view_loading"
+    app:msv_viewState="content"
+    app:stateView="@{listUserViewModel.state}">
 
     <android.support.v7.widget.RecyclerView
       android:id="@android:id/list"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:userList="@{listUserViewModel.userList}"
-      android:visibility="visible" />
+      android:visibility="visible"
+      app:userList="@{listUserViewModel.userList}" />
 
-    <!--<include-->
-      <!--android:id="@+id/loading"-->
-      <!--layout="@layout/view_loading" />-->
-
-    <!--<include-->
-      <!--android:id="@+id/retry"-->
-      <!--layout="@layout/view_retry" />-->
-
-  </RelativeLayout>
-
+  </com.kennyc.view.MultiStateView>
 </layout>

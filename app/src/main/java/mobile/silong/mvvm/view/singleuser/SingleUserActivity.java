@@ -2,6 +2,7 @@ package mobile.silong.mvvm.view.singleuser;
 
 import android.databinding.DataBindingUtil;
 
+import mobile.silong.mvvm.Constant;
 import mobile.silong.mvvm.R;
 import mobile.silong.mvvm.databinding.ActivitySingleUserBinding;
 import mobile.silong.mvvm.presentation.SingleUserViewModel;
@@ -18,7 +19,7 @@ public class SingleUserActivity extends BaseActivity<SingleUserViewModel> {
   @Override
   public SingleUserViewModel createViewModel() {
     SingleUserViewModel viewModel = getAppComponent().getSingleUserViewModel();
-    viewModel.setUserId(getIntent().getExtras().getString("id"));
+    viewModel.setUserId(getIntent().getExtras().getString(Constant.Extra.EXTRA_USER_ID));
     return viewModel;
   }
 }

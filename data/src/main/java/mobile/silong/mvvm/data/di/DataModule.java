@@ -29,14 +29,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class DataModule {
 
-  private String mUserId;
-
   public DataModule() {
 
-  }
-
-  public DataModule(String userId) {
-    mUserId = userId;
   }
 
   @Provides

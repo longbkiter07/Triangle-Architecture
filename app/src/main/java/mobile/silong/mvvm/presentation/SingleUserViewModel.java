@@ -1,6 +1,9 @@
 package mobile.silong.mvvm.presentation;
 
+import com.kennyc.view.MultiStateView;
+
 import android.databinding.ObservableField;
+import android.databinding.ObservableInt;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -18,8 +21,6 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   private static final String TAG = SingleUserViewModel.class.getSimpleName();
 
-  private User mUser;
-
   private String mUserId;
 
   private SingleUserUseCase mSingleUserUseCase;
@@ -36,6 +37,8 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   public ObservableField<String> coverUrl = new ObservableField<>();
 
+  public ObservableInt state = new ObservableInt();
+
   @Inject
   public SingleUserViewModel(SingleUserUseCase singleUserUseCase) {
     mSingleUserUseCase = singleUserUseCase;
@@ -47,13 +50,19 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
   }
 
   private void load() {
-    mSingleUserUseCase.with(mUserId).buildUseCase()
+    state.set(MultiStateView.VIEW_STATE_LOADING);
+
+    mSingleUserUseCase
+        .with(mUserId)
+        .buildUseCase()
         .compose(new BackgroundTaskTransformer<>())
         .subscribe(user -> {
           Log.i(TAG, "onNext");
+          state.set(MultiStateView.VIEW_STATE_CONTENT);
           setUser(user);
         }, throwable -> {
           Log.e(TAG, "onError: " + throwable.getMessage());
+          state.set(MultiStateView.VIEW_STATE_ERROR);
         });
   }
 
@@ -62,8 +71,6 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
   }
 
   public void setUser(User user) {
-    mUser = user;
-
     id.set(user.getId());
     fullName.set(user.getFullName());
     email.set(user.getEmail());

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import mobile.silong.mvvm.Constant;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.view.singleuser.SingleUserActivity;
 
@@ -28,7 +29,7 @@ public class ItemUserViewModel extends BaseViewModel {
   public View.OnClickListener onClickItemUser() {
     return v -> {
       Intent intent = new Intent(mContext, SingleUserActivity.class);
-      intent.putExtra("id", mUser.getId());
+      intent.putExtra(Constant.Extra.EXTRA_USER_ID, mUser.getId());
       mContext.startActivity(intent);
     };
   }
