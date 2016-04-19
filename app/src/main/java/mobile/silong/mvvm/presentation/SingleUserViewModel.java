@@ -1,6 +1,5 @@
 package mobile.silong.mvvm.presentation;
 
-import android.databinding.Bindable;
 import android.databinding.ObservableField;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,11 +59,6 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   public void setUserId(String userId) {
     mUserId = userId;
-  }
-
-  @Bindable
-  public User getUser() {
-    return mUser;
   }
 
   public void setUser(User user) {
