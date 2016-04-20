@@ -5,5 +5,4 @@ package mobile.silong.mvvm.view;
  */
 public interface MVVMView {
 
-  void showShortToast(String message);
 }

@@ -3,8 +3,10 @@ package mobile.silong.mvvm.di;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import mobile.silong.mvvm.presentation.ListUserViewModel;
-import mobile.silong.mvvm.presentation.SingleUserViewModel;
+import mobile.silong.mvvm.view.listuser.di.ListUserComponent;
+import mobile.silong.mvvm.view.listuser.di.ListUserModule;
+import mobile.silong.mvvm.view.singleuser.di.SingleUserComponent;
+import mobile.silong.mvvm.view.singleuser.di.SingleUserModule;
 
 /**
  * Created by SILONG on 4/13/16.
@@ -13,7 +15,7 @@ import mobile.silong.mvvm.presentation.SingleUserViewModel;
 @Singleton
 public interface AppComponent {
 
-   ListUserViewModel getListUserViewModel();
+  ListUserComponent plus(ListUserModule listUserModule);
 
-   SingleUserViewModel getSingleUserViewModel();
+  SingleUserComponent plus(SingleUserModule singleUserModule);
 }

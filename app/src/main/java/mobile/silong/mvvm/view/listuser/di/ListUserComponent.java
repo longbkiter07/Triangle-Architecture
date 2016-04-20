@@ -1,10 +1,15 @@
 package mobile.silong.mvvm.view.listuser.di;
 
-import dagger.Component;
+import dagger.Subcomponent;
+import mobile.silong.mvvm.di.PerActivity;
+import mobile.silong.mvvm.presentation.ListUserViewModel;
 
 /**
- * Created by lamtn on 4/14/16.
+ * Created by SILONG on 4/20/16.
  */
-@Component
+@Subcomponent(modules = ListUserModule.class)
+@PerActivity
 public interface ListUserComponent {
+
+  ListUserViewModel getListUserViewModel();
 }

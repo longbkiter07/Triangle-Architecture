@@ -59,7 +59,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserBindingHol
     ItemUserBinding binding;
 
     public UserBindingHolder(ItemUserBinding binding) {
-      super(binding.cardView);
+      super(binding.getRoot());
       this.binding = binding;
     }
   }

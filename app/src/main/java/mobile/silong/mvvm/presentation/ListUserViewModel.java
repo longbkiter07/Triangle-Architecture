@@ -27,28 +27,26 @@ public class ListUserViewModel extends BaseViewModel<ListUserView> {
 
   public ObservableInt state = new ObservableInt();
 
-  @Inject
   public ListUserViewModel(ListUserUseCase listUserUseCase) {
     mListUserUseCase = listUserUseCase;
   }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
-    load();
+    loadAllUsers();
   }
 
-  public void load() {
+  public void loadAllUsers() {
     state.set(MultiStateView.VIEW_STATE_LOADING);
-
     mListUserUseCase.buildUseCase()
         .compose(new BackgroundTaskTransformer<>())
         .subscribe(users -> {
-          Log.i(TAG, "load");
+          Log.i(TAG, "loadAllUsers");
           state.set(MultiStateView.VIEW_STATE_CONTENT);
           userList.clear();
           userList.addAll(users);
         }, throwable -> {
-          Log.e(TAG, "load: " + throwable.getMessage());
+          Log.e(TAG, "loadAllUsers: " + throwable.getMessage());
           state.set(MultiStateView.VIEW_STATE_ERROR);
         });
   }

@@ -44,7 +44,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
-          android:text="Id"
+          android:text="@string/id"
           android:textStyle="bold" />
 
         <TextView
@@ -58,7 +58,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
-          android:text="Full Name"
+          android:text="@string/full_name"
           android:textStyle="bold" />
 
         <TextView
@@ -72,7 +72,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
-          android:text="Email"
+          android:text="@string/email"
           android:textStyle="bold" />
 
         <TextView
@@ -86,7 +86,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
-          android:text="Description"
+          android:text="@string/description"
           android:textStyle="bold" />
 
         <TextView
@@ -100,7 +100,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
-          android:text="Followers"
+          android:text="@string/followers"
           android:textStyle="bold" />
 
         <TextView

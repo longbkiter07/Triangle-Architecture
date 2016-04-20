@@ -16,12 +16,9 @@ public class App extends Application {
 
   private AppComponent mAppComponent;
 
-  private static App sInstance;
-
   @Override
   public void onCreate() {
     super.onCreate();
-    sInstance = this;
     DataApp.init(this);
     Fresco.initialize(this);
   }
@@ -33,9 +30,5 @@ public class App extends Application {
           .build();
     }
     return mAppComponent;
-  }
-
-  public static App getInstance() {
-    return sInstance;
   }
 }

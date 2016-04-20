@@ -7,8 +7,6 @@ import android.databinding.ObservableInt;
 import android.os.Bundle;
 import android.util.Log;
 
-import javax.inject.Inject;
-
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.usecase.SingleUserUseCase;
 import mobile.silong.mvvm.transformer.BackgroundTaskTransformer;
@@ -20,10 +18,6 @@ import mobile.silong.mvvm.view.singleuser.SingleUserView;
 public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   private static final String TAG = SingleUserViewModel.class.getSimpleName();
-
-  private String mUserId;
-
-  private SingleUserUseCase mSingleUserUseCase;
 
   public ObservableField<String> id = new ObservableField<>();
 
@@ -39,17 +33,21 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
 
   public ObservableInt state = new ObservableInt();
 
-  @Inject
-  public SingleUserViewModel(SingleUserUseCase singleUserUseCase) {
+  private String mUserId;
+
+  private SingleUserUseCase mSingleUserUseCase;
+
+  public SingleUserViewModel(String userId, SingleUserUseCase singleUserUseCase) {
     mSingleUserUseCase = singleUserUseCase;
+    mUserId = userId;
   }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
-    load();
+    loadUser();
   }
 
-  private void load() {
+  private void loadUser() {
     state.set(MultiStateView.VIEW_STATE_LOADING);
 
     mSingleUserUseCase
@@ -64,10 +62,6 @@ public class SingleUserViewModel extends BaseViewModel<SingleUserView> {
           Log.e(TAG, "onError: " + throwable.getMessage());
           state.set(MultiStateView.VIEW_STATE_ERROR);
         });
-  }
-
-  public void setUserId(String userId) {
-    mUserId = userId;
   }
 
   public void setUser(User user) {

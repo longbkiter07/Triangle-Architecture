@@ -51,8 +51,4 @@ public abstract class BaseActivity<T extends BaseViewModel> extends AppCompatAct
 
   public abstract T createViewModel();
 
-  @Override
-  public void showShortToast(String message) {
-
-  }
 }

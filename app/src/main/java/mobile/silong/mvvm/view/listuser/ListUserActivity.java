@@ -6,8 +6,9 @@ import mobile.silong.mvvm.R;
 import mobile.silong.mvvm.databinding.ActivityListUserBinding;
 import mobile.silong.mvvm.presentation.ListUserViewModel;
 import mobile.silong.mvvm.view.BaseActivity;
+import mobile.silong.mvvm.view.listuser.di.ListUserModule;
 
-public class ListUserActivity extends BaseActivity<ListUserViewModel> {
+public class ListUserActivity extends BaseActivity<ListUserViewModel> implements ListUserView {
 
   @Override
   public void bindViewModel(ListUserViewModel viewModel) {
@@ -17,6 +18,7 @@ public class ListUserActivity extends BaseActivity<ListUserViewModel> {
 
   @Override
   public ListUserViewModel createViewModel() {
-    return getAppComponent().getListUserViewModel();
+    return getAppComponent().plus(new ListUserModule()).getListUserViewModel();
   }
+
 }
