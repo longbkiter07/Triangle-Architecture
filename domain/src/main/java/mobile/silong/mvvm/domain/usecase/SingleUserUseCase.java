@@ -3,7 +3,6 @@ package mobile.silong.mvvm.domain.usecase;
 import android.text.TextUtils;
 
 import mobile.silong.mvvm.domain.model.User;
-import mobile.silong.mvvm.domain.service.ApiService;
 import mobile.silong.mvvm.domain.service.LocalService;
 import rx.Observable;
 
@@ -12,15 +11,17 @@ import rx.Observable;
  */
 public class SingleUserUseCase implements UseCase<User> {
 
-  private final ApiService mApiService;
+  private static final String TAG = SingleUserUseCase.class.getSimpleName();
 
   private final LocalService mLocalService;
 
+  private final GetAndSaveUserUseCase mGetAndSaveUserUseCase;
+
   private String mId;
 
-  public SingleUserUseCase(ApiService apiService, LocalService localService) {
-    mApiService = apiService;
+  public SingleUserUseCase(LocalService localService, GetAndSaveUserUseCase getAndSaveUserUseCase) {
     mLocalService = localService;
+    mGetAndSaveUserUseCase = getAndSaveUserUseCase;
   }
 
   public SingleUserUseCase with(String id) {
@@ -33,9 +34,9 @@ public class SingleUserUseCase implements UseCase<User> {
     if (TextUtils.isEmpty(mId)) {
       return Observable.error(new IllegalArgumentException());
     } else {
-      return mApiService.getUser(mId)
-          .ofType(User.class)
-          .flatMap(user -> mLocalService.saveUser(user).flatMap(aVoid -> Observable.just(user)));
+      return mLocalService
+          .getUser(mId)
+          .onErrorResumeNext(throwable -> mGetAndSaveUserUseCase.with(mId).buildUseCase());
     }
   }
 }

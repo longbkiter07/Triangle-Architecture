@@ -29,6 +29,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class DataModule {
 
+  public DataModule() {
+
+  }
+
   @Provides
   @Singleton
   public LocalService provideLocalService(MVVMConverter<User, CacheUser> converter) {

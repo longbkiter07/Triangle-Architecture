@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <variable
+      name="listUserViewModel"
+      type="mobile.silong.mvvm.presentation.ListUserViewModel" />
+  </data>
+
+  <com.kennyc.view.MultiStateView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_emptyView="@layout/view_empty"
+    app:msv_errorView="@layout/view_error"
+    app:msv_loadingView="@layout/view_loading"
+    app:msv_viewState="content"
+    app:stateView="@{listUserViewModel.state}">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@android:id/list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="visible"
+      app:userList="@{listUserViewModel.userList}" />
+
+  </com.kennyc.view.MultiStateView>
+</layout>

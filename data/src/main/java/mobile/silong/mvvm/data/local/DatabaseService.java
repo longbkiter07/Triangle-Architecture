@@ -5,6 +5,8 @@ import com.raizlabs.android.dbflow.runtime.transaction.process.ProcessModelInfo;
 import com.raizlabs.android.dbflow.runtime.transaction.process.SaveModelTransaction;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,8 @@ import rx.subjects.PublishSubject;
  */
 public class DatabaseService implements LocalService {
 
+  private static final String TAG = DatabaseService.class.getSimpleName();
+
   private final MVVMConverter<User, CacheUser> mUserConverter;
 
   private PublishSubject<User> mSubject;
@@ -39,6 +43,8 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<User> getUser(String id) {
+    Log.e(TAG, "getUser");
+
     return Observable.create((Observable.OnSubscribe<User>) subscriber -> {
       try {
         User user = SQLite.select().from(CacheUser.class).where(CacheUser_Table.id.eq(id)).querySingle();
@@ -55,6 +61,8 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<List<? extends User>> getUsers() {
+    Log.e(TAG, "getUsers");
+
     return Observable.create(subscriber -> {
       try {
         List<CacheUser> cacheUsers = SQLite.select().from(CacheUser.class).queryList();
@@ -67,11 +75,14 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<Void> saveUser(User user) {
+    Log.e(TAG, "saveUser");
+
     return Observable.create(subscriber -> {
       try {
         CacheUser cacheUser = mUserConverter.convert(user);
         cacheUser.save();
         mSubject.onNext(user);
+        RxUtils.onNext(subscriber, null, true);
       } catch (Exception e) {
         RxUtils.onError(subscriber, e);
       }
@@ -80,6 +91,8 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<Void> saveUsers(List<User> users) {
+    Log.e(TAG, "saveUsers");
+
     return Observable.create(subscriber -> {
       try {
         List<CacheUser> cacheUsers = new ArrayList<CacheUser>(users.size());

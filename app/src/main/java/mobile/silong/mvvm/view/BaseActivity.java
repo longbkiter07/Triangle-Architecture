@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import mobile.silong.mvvm.App;
+import mobile.silong.mvvm.di.AppComponent;
 import mobile.silong.mvvm.presentation.BaseViewModel;
 
 /**
@@ -19,11 +21,29 @@ public abstract class BaseActivity<T extends BaseViewModel> extends AppCompatAct
     mViewModel = createViewModel();
     mViewModel.attachView(this);
     bindViewModel(mViewModel);
+    mViewModel.onCreate(savedInstanceState);
+  }
+
+  @Override
+  protected void onResume() {
+    mViewModel.onResume();
+    super.onResume();
+  }
+
+  @Override
+  protected void onPause() {
+    mViewModel.onPause();
+    super.onPause();
+  }
+
+  public AppComponent getAppComponent() {
+    return ((App) getApplication()).getApplicationComponent();
   }
 
   @Override
   protected void onDestroy() {
     mViewModel.detachView();
+    mViewModel.onDestroy();
     super.onDestroy();
   }
 

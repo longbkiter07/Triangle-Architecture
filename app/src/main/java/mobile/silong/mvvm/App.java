@@ -1,5 +1,7 @@
 package mobile.silong.mvvm;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import android.app.Application;
 
 import mobile.silong.mvvm.data.DataApp;
@@ -18,6 +20,7 @@ public class App extends Application {
   public void onCreate() {
     super.onCreate();
     DataApp.init(this);
+    Fresco.initialize(this);
   }
 
   public AppComponent getApplicationComponent() {

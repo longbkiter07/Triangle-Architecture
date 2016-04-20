@@ -35,4 +35,5 @@ public class AppModule {
   public Resources provideResource(@AppContext Context context) {
     return context.getResources();
   }
+
 }

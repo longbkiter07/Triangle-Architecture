@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable
+      name="itemUser"
+      type="mobile.silong.mvvm.presentation.ItemUserViewModel" />
+  </data>
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:minHeight="48dp"
+    android:onClick="@{itemUser.onClickItemUser}"
+    android:padding="16dp"
+    android:text="@{itemUser.fullName}"
+    tools:text="Full name of User" />
+</layout>

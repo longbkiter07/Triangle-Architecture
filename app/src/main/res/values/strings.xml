@@ -1,3 +1,11 @@
 <resources>
-  <string name="app_name">MVVMCleanArchitecture</string>
+    <string name="app_name">MVVMCleanArchitecture</string>
+    <string name="remote">Remote</string>
+    <string name="local">Local</string>
+    <string name="choose_data_source">Choose data source</string>
+    <string name="id">Id</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="description">Description</string>
+    <string name="followers">Followers</string>
 </resources>

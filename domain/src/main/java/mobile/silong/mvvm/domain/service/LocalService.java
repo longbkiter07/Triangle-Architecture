@@ -23,5 +23,4 @@ public interface LocalService {
   Observable<Void> removeUsers(List<String> users);
 
   Observable<User> observeLocalChange();
-
 }
