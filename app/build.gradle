@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'jacoco'
 
 android {
   compileSdkVersion 23
@@ -17,6 +18,9 @@ android {
     versionName "1.0"
   }
   buildTypes {
+    debug {
+      testCoverageEnabled = true
+    }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -25,6 +29,9 @@ android {
   dataBinding {
     enabled = true
   }
+  jacoco {
+    version "0.7.2.201409121644"
+  }
 }
 retrolambda {
   jvmArgs '-noverify'
@@ -32,6 +39,10 @@ retrolambda {
 dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
   testCompile 'junit:junit:4.12'
+  testCompile('org.robolectric:robolectric:3.0') {
+    transitive = true
+  }
+
   provided 'com.google.dagger:dagger-compiler:2.2'
   compile 'com.android.support:appcompat-v7:23.3.0'
   compile 'com.android.support:recyclerview-v7:23.3.0'

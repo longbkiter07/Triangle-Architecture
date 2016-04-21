@@ -15,10 +15,16 @@ android {
     versionName "1.0"
   }
   buildTypes {
+    debug {
+      testCoverageEnabled = true
+    }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
+  jacoco {
+    version "0.7.2.201409121644"
   }
 }
 retrolambda {
@@ -29,4 +35,5 @@ dependencies {
   provided 'com.google.dagger:dagger-compiler:2.2'
   compile 'com.google.dagger:dagger:2.2'
   compile 'io.reactivex:rxjava:1.1.0'
+  testCompile 'junit:junit:4.12'
 }

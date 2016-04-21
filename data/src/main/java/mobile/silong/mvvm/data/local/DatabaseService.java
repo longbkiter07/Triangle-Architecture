@@ -1,18 +1,15 @@
 package mobile.silong.mvvm.data.local;
 
-import com.raizlabs.android.dbflow.runtime.TransactionManager;
 import com.raizlabs.android.dbflow.runtime.transaction.process.ProcessModelInfo;
 import com.raizlabs.android.dbflow.runtime.transaction.process.SaveModelTransaction;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.data.local.model.CacheUser;
 import mobile.silong.mvvm.data.local.model.CacheUser_Table;
+import mobile.silong.mvvm.domain.converter.MVVMConverter;
 import mobile.silong.mvvm.domain.exception.DataNotFoundException;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.service.LocalService;
@@ -43,7 +40,6 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<User> getUser(String id) {
-    Log.e(TAG, "getUser");
 
     return Observable.create((Observable.OnSubscribe<User>) subscriber -> {
       try {
@@ -61,7 +57,6 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<List<? extends User>> getUsers() {
-    Log.e(TAG, "getUsers");
 
     return Observable.create(subscriber -> {
       try {
@@ -75,7 +70,6 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<Void> saveUser(User user) {
-    Log.e(TAG, "saveUser");
 
     return Observable.create(subscriber -> {
       try {
@@ -91,7 +85,6 @@ public class DatabaseService implements LocalService {
 
   @Override
   public Observable<Void> saveUsers(List<User> users) {
-    Log.e(TAG, "saveUsers");
 
     return Observable.create(subscriber -> {
       try {
@@ -100,7 +93,7 @@ public class DatabaseService implements LocalService {
           cacheUsers.add(mUserConverter.convert(user));
           mSubject.onNext(user);
         }
-        TransactionManager.getInstance().addTransaction(new SaveModelTransaction(ProcessModelInfo.withModels()));
+        new SaveModelTransaction(ProcessModelInfo.withModels(cacheUsers)).onExecute();
         RxUtils.onNext(subscriber, null, true);
       } catch (Exception e) {
         RxUtils.onError(subscriber, e);

@@ -16,10 +16,16 @@ android {
     versionName "1.0"
   }
   buildTypes {
+    debug {
+      testCoverageEnabled = true
+    }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
+  jacoco {
+    version "0.7.2.201409121644"
   }
 }
 retrolambda {
@@ -28,6 +34,7 @@ retrolambda {
 def dbflow_version = "3.0.0-beta5"
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
+  testCompile 'junit:junit:4.12'
   provided 'javax.annotation:jsr250-api:1.0'
   provided 'com.google.dagger:dagger-compiler:2.2'
   apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
@@ -43,4 +50,5 @@ dependencies {
     transitive = true
   }
   compile project(path: ':domain')
+  testCompile 'org.robolectric:robolectric:3.0'
 }
