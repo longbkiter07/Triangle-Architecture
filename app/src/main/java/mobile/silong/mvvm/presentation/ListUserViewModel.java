@@ -7,10 +7,8 @@ import android.databinding.ObservableInt;
 import android.os.Bundle;
 import android.util.Log;
 
-import javax.inject.Inject;
-
 import mobile.silong.mvvm.domain.model.User;
-import mobile.silong.mvvm.domain.usecase.ListUserUseCase;
+import mobile.silong.mvvm.domain.usecase.RemoteListUserUseCase;
 import mobile.silong.mvvm.transformer.BackgroundTaskTransformer;
 import mobile.silong.mvvm.view.listuser.ListUserView;
 
@@ -21,14 +19,14 @@ public class ListUserViewModel extends BaseViewModel<ListUserView> {
 
   private static final String TAG = ListUserViewModel.class.getSimpleName();
 
-  private ListUserUseCase mListUserUseCase;
+  private RemoteListUserUseCase mRemoteListUserUseCase;
 
   public ObservableArrayList<User> userList = new ObservableArrayList<>();
 
   public ObservableInt state = new ObservableInt();
 
-  public ListUserViewModel(ListUserUseCase listUserUseCase) {
-    mListUserUseCase = listUserUseCase;
+  public ListUserViewModel(RemoteListUserUseCase remoteListUserUseCase) {
+    mRemoteListUserUseCase = remoteListUserUseCase;
   }
 
   @Override
@@ -38,7 +36,7 @@ public class ListUserViewModel extends BaseViewModel<ListUserView> {
 
   public void loadAllUsers() {
     state.set(MultiStateView.VIEW_STATE_LOADING);
-    mListUserUseCase.buildUseCase()
+    mRemoteListUserUseCase.buildUseCase()
         .compose(new BackgroundTaskTransformer<>())
         .subscribe(users -> {
           Log.i(TAG, "loadAllUsers");

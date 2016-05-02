@@ -2,6 +2,7 @@ package mobile.silong.mvvm.data.api;
 
 import java.util.List;
 
+import mobile.silong.mvvm.data.api.transformer.BaseApiTransformer;
 import mobile.silong.mvvm.domain.model.User;
 import mobile.silong.mvvm.domain.service.ApiService;
 import rx.Observable;
@@ -9,22 +10,21 @@ import rx.Observable;
 /**
  * Created by SILONG on 4/14/16.
  */
-public class ApiServiceWrapper implements ApiService {
+public class ApiServiceImpl implements ApiService {
 
   private HttpApiService mHttpApiService;
 
-  public ApiServiceWrapper(HttpApiService httpApiService) {
+  public ApiServiceImpl(HttpApiService httpApiService) {
     mHttpApiService = httpApiService;
   }
 
   @Override
-  public Observable<List<User>> getUsers() {
-    Observable<User> observable = mHttpApiService.getUsers().flatMap(apiUsers -> Observable.from(apiUsers));
-    return observable.toList();
+  public Observable<List<? extends User>> getUsers() {
+    return mHttpApiService.getUsers().compose(new BaseApiTransformer<>());
   }
 
   @Override
   public Observable<User> getUser(String id) {
-    return mHttpApiService.getUser(id).ofType(User.class);
+    return mHttpApiService.getUser(id).compose(new BaseApiTransformer<>());
   }
 }

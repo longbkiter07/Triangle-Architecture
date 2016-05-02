@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import mobile.silong.mvvm.data.api.ApiServiceWrapper;
+import mobile.silong.mvvm.data.api.ApiServiceImpl;
 import mobile.silong.mvvm.data.api.HttpApiService;
 import mobile.silong.mvvm.data.local.DatabaseService;
 import mobile.silong.mvvm.data.local.converter.CacheUserConverter;
@@ -49,12 +49,12 @@ public class DataModule {
   @Singleton
   public ApiService provideApiService(OkHttpClient okHttpClient, Gson gson) {
     Retrofit retrofit = new Retrofit.Builder()
-        .baseUrl("http://www.android10.org/myapi/")
+        .baseUrl("http://android-architecture.silong.me")
         .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .client(okHttpClient)
         .build();
-    return new ApiServiceWrapper(retrofit.create(HttpApiService.class));
+    return new ApiServiceImpl(retrofit.create(HttpApiService.class));
   }
 
   @Provides

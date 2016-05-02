@@ -1,6 +1,8 @@
 package mobile.silong.mvvm.view.singleuser;
 
 import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import mobile.silong.mvvm.Constant;
 import mobile.silong.mvvm.R;
@@ -10,6 +12,14 @@ import mobile.silong.mvvm.view.BaseActivity;
 import mobile.silong.mvvm.view.singleuser.di.SingleUserModule;
 
 public class SingleUserActivity extends BaseActivity<SingleUserViewModel> {
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    if (getSupportActionBar() != null) {
+      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+  }
 
   @Override
   public void bindViewModel(SingleUserViewModel viewModel) {
