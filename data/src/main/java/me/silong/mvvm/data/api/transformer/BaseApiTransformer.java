@@ -30,7 +30,7 @@ public class BaseApiTransformer<T> implements Observable.Transformer<BaseRespons
   public Observable<T> call(Observable<BaseResponse<T>> baseResponseObservable) {
     return baseResponseObservable.flatMap(tBaseResponse -> {
       switch (tBaseResponse.getCode()) {
-        case 400://successful
+        case 200://successful
           return Observable.just(tBaseResponse.getData());
         default:
           return Observable.error(new ApiException());

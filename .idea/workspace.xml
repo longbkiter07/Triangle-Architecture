@@ -10,69 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8de3d183-be75-42f7-abcd-7ba019024b69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_1_3_0.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/mobile/silong/mvvm/ApplicationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/me/silong/mvvm/ApplicationTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/App.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/App.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/Constant.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/Constant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/adapter/UserAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/adapter/UserAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/di/AppComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/di/AppComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/di/AppContext.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/di/AppContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/di/AppModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/di/AppModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/di/PerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/di/PerActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/presentation/BaseViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/presentation/BaseViewModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/presentation/ItemUserViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/presentation/ItemUserViewModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/presentation/ListUserViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/presentation/ListUserViewModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/presentation/SingleUserViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/presentation/SingleUserViewModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/presentation/util/BindingUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/presentation/util/BindingUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/transformer/BackgroundTaskTransformer.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/transformer/BackgroundTaskTransformer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/BaseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/BaseView.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/MVVMView.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/MVVMView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/listuser/ListUserActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/listuser/ListUserActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/listuser/ListUserView.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/listuser/ListUserView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/listuser/di/ListUserComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/listuser/di/ListUserComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/listuser/di/ListUserModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/listuser/di/ListUserModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/singleuser/SingleUserActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/singleuser/SingleUserActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/singleuser/SingleUserView.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/singleuser/SingleUserView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/singleuser/di/SingleUserComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/singleuser/di/SingleUserComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/silong/mvvm/view/singleuser/di/SingleUserModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/singleuser/di/SingleUserModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile/silong/mvvm/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/me/silong/mvvm/ExampleUnitTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile/silong/mvvm/view/listuser/ListUserActivityTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/me/silong/mvvm/view/listuser/ListUserActivityTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/DataApp.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/DataApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/ApiServiceImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/ApiServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/BaseResponse.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/BaseResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/HttpApiService.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/HttpApiService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/exception/ApiException.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/exception/ApiException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/model/ApiUser.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/model/ApiUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/api/transformer/BaseApiTransformer.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/transformer/BaseApiTransformer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/di/DataModule.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/di/DataModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/local/DatabaseService.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/local/DatabaseService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/local/MVVMDatabase.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/local/MVVMDatabase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/local/converter/CacheUserConverter.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/local/converter/CacheUserConverter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/mobile/silong/mvvm/data/local/model/CacheUser.java" afterPath="$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/local/model/CacheUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/test/java/mobile/silong/mvvm/data/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/data/src/test/java/me/silong/mvvm/data/ExampleUnitTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/test/java/mobile/silong/mvvm/data/di/DataComponent.java" afterPath="$PROJECT_DIR$/data/src/test/java/me/silong/mvvm/data/di/DataComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/test/java/mobile/silong/mvvm/data/local/DatabaseServiceTest.java" afterPath="$PROJECT_DIR$/data/src/test/java/me/silong/mvvm/data/local/DatabaseServiceTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/converter/MVVMConverter.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/converter/MVVMConverter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/di/DomainModule.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/di/DomainModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/exception/DataNotFoundException.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/exception/DataNotFoundException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/exception/MVVMException.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/exception/MVVMException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/model/User.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/model/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/service/ApiService.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/service/ApiService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/service/LocalService.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/service/LocalService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/usecase/GetAndSaveUserUseCase.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/usecase/GetAndSaveUserUseCase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/usecase/RemoteListUserUseCase.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/usecase/RemoteListUserUseCase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/usecase/SingleUserUseCase.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/usecase/SingleUserUseCase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/usecase/UseCase.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/usecase/UseCase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/mobile/silong/mvvm/domain/util/RxUtils.java" afterPath="$PROJECT_DIR$/domain/src/main/java/me/silong/mvvm/domain/util/RxUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_user.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_user.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_single_user.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_single_user.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_user.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_user.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MVVMArchitecture.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,10 +67,32 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
               <folding>
                 <element signature="e#0#2095#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseApiTransformer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/transformer/BaseApiTransformer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#1306#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03504673">
+              <caret line="1" column="218" selection-start-line="1" selection-start-column="218" selection-end-line="1" selection-end-column="218" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1978022">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="25" selection-start-line="23" selection-start-column="22" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -3754,6 +3714,7 @@
         <option value="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -3809,222 +3770,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="di" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVVMCleanArchitecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4527,7 +4272,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4535,7 +4280,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.50647247" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32199788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48671627" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48671627" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38349515" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50159407" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
@@ -4983,16 +4728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2095#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5003,8 +4738,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1978022">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="25" selection-start-line="23" selection-start-column="22" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#2095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/transformer/BaseApiTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03504673">
+          <caret line="1" column="218" selection-start-line="1" selection-start-column="218" selection-end-line="1" selection-end-column="218" />
           <folding />
         </state>
       </provider>
