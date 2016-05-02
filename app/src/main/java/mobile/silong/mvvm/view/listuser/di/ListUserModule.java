@@ -3,7 +3,7 @@ package mobile.silong.mvvm.view.listuser.di;
 import dagger.Module;
 import dagger.Provides;
 import mobile.silong.mvvm.di.PerActivity;
-import mobile.silong.mvvm.domain.usecase.ListUserUseCase;
+import mobile.silong.mvvm.domain.usecase.RemoteListUserUseCase;
 import mobile.silong.mvvm.presentation.ListUserViewModel;
 
 /**
@@ -13,7 +13,7 @@ import mobile.silong.mvvm.presentation.ListUserViewModel;
 public class ListUserModule {
   @Provides
   @PerActivity
-  public ListUserViewModel provideListUserViewModel(ListUserUseCase listUserUseCase) {
-    return new ListUserViewModel(listUserUseCase);
+  public ListUserViewModel provideListUserViewModel(RemoteListUserUseCase remoteListUserUseCase) {
+    return new ListUserViewModel(remoteListUserUseCase);
   }
 }

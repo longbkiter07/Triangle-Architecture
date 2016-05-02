@@ -12,9 +12,9 @@ import rx.Observable;
  */
 public interface HttpApiService {
 
-  @GET("users.json")
-  Observable<List<ApiUser>> getUsers();
+  @GET("/users.json")
+  Observable<BaseResponse<List<ApiUser>>> getUsers();
 
-  @GET("user_{id}.json")
-  Observable<ApiUser> getUser(@Path("id") String id);
+  @GET("/user_{id}.json")
+  Observable<BaseResponse<ApiUser>> getUser(@Path("id") String id);
 }
