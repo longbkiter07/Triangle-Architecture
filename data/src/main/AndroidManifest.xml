@@ -15,6 +15,6 @@
   ~
   -->
 
-<manifest package="mobile.silong.data">
+<manifest package="me.silong.mvvm.data">
 
 </manifest>

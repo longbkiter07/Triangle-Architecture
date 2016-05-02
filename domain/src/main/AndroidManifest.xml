@@ -15,6 +15,6 @@
   ~
   -->
 
-<manifest package="mobile.silong.domain">
+<manifest package="me.silong.mvvm.domain">
 
 </manifest>

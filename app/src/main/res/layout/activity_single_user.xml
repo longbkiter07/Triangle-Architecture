@@ -24,7 +24,7 @@
 
     <variable
       name="userModel"
-      type="mobile.silong.mvvm.presentation.SingleUserViewModel" />
+      type="me.silong.mvvm.presentation.SingleUserViewModel" />
   </data>
 
   <com.kennyc.view.MultiStateView

@@ -21,7 +21,7 @@
   <data>
     <variable
       name="itemUser"
-      type="mobile.silong.mvvm.presentation.ItemUserViewModel" />
+      type="me.silong.mvvm.presentation.ItemUserViewModel" />
   </data>
   <TextView
     android:layout_width="match_parent"

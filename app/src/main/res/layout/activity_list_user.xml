@@ -23,7 +23,7 @@
 
     <variable
       name="listUserViewModel"
-      type="mobile.silong.mvvm.presentation.ListUserViewModel" />
+      type="me.silong.mvvm.presentation.ListUserViewModel" />
   </data>
 
   <com.kennyc.view.MultiStateView
