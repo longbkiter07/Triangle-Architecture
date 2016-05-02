@@ -9,7 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8de3d183-be75-42f7-abcd-7ba019024b69" name="Default" comment="" />
+    <list default="true" id="8de3d183-be75-42f7-abcd-7ba019024b69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="MVVMArchitecture.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -73,14 +75,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseApiTransformer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseApiTransformer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/transformer/BaseApiTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73626375">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
               <folding>
                 <element signature="e#0#1306#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03504673">
+              <caret line="1" column="218" selection-start-line="1" selection-start-column="218" selection-end-line="1" selection-end-column="218" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -3702,6 +3714,7 @@
         <option value="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/silong/mvvm/view/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -4743,11 +4756,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/src/main/java/me/silong/mvvm/data/api/transformer/BaseApiTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73626375">
+        <state vertical-scroll-proportion="0.0">
           <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
           <folding>
             <element signature="e#0#1306#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03504673">
+          <caret line="1" column="218" selection-start-line="1" selection-start-column="218" selection-end-line="1" selection-end-column="218" />
+          <folding />
         </state>
       </provider>
     </entry>
