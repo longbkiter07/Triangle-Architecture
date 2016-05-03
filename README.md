@@ -7,6 +7,7 @@ This example is using:
 - [Robolectric](http://robolectric.org/) for unit testing
 - [RxJava and RxAndroid](https://github.com/ReactiveX/RxJava) for simplify the business logic
 - [MultiStateView](https://github.com/Kennyc1012/MultiStateView) for changing view state
+- [Fresco](http://frescolib.org/) for image loader
 
 # Concept
 
