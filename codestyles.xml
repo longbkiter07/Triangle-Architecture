@@ -16,7 +16,7 @@
   ~
   -->
 
-<code_scheme name="MySQUAR">
+<code_scheme name="codestyles">
   <option name="JAVA_INDENT_OPTIONS">
     <value>
       <option name="INDENT_SIZE" value="4" />
@@ -47,25 +47,25 @@
   <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="9999" />
   <option name="IMPORT_LAYOUT_TABLE">
     <value>
-      <package name="com.google" withSubpackages="true" static="false" />
+      <package name="com.google" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="com" withSubpackages="true" static="false" />
+      <package name="com" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="junit" withSubpackages="true" static="false" />
+      <package name="junit" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="net" withSubpackages="true" static="false" />
+      <package name="net" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="org" withSubpackages="true" static="false" />
+      <package name="org" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="android" withSubpackages="true" static="false" />
+      <package name="android" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="java" withSubpackages="true" static="false" />
+      <package name="java" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="javax" withSubpackages="true" static="false" />
+      <package name="javax" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="" withSubpackages="true" static="false" />
+      <package name="" static="false" withSubpackages="true" />
       <emptyLine />
-      <package name="" withSubpackages="true" static="true" />
+      <package name="" static="true" withSubpackages="true" />
     </value>
   </option>
   <option name="RIGHT_MARGIN" value="140" />
